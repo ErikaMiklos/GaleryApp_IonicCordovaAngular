@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  contact={
+    name:'EMiklos',
+    email:'erika@gmail.com',
+    photo:'assets/images/teddybear2.png'
+  }
 
   constructor() {}
 
