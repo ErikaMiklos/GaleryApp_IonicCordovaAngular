@@ -1,3 +1,17 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu [contentId]="content">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+        <ion-nav-link *ngFor="let m of menus" router-direction="forward" [component]="m">
+          <ion-item>{{m.title}}</ion-item>
+        </ion-nav-link>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet #content></ion-router-outlet>
 </ion-app>
