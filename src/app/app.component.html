@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-menu [contentId]="content">
+  <ion-menu contentId="main-content">
     <ion-header>
       <ion-toolbar color="danger">
         <ion-title>Menu</ion-title>
@@ -7,11 +7,15 @@
     </ion-header>
     <ion-content class="ion-padding">
       <ion-list>
-        <ion-nav-link *ngFor="let m of menus" router-direction="forward" [component]="m">
-          <ion-item>{{m.title}}</ion-item>
-        </ion-nav-link>
+        <ion-menu-toggle *ngFor="let m of menus">
+          <ion-nav-link router-direction="forward" [component]="m.component">
+            <ion-item>{{m.title}}</ion-item>
+          </ion-nav-link>
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>
-  <ion-router-outlet #content></ion-router-outlet>
+  <ion-content id="main-content">
+    <ion-router-outlet ></ion-router-outlet>
+  </ion-content>
 </ion-app>

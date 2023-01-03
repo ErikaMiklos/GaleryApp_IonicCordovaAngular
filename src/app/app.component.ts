@@ -11,10 +11,10 @@ import {HomePage} from "./home/home.page";
 })
 export class AppComponent {
   menus=[
-    {title:'My Gallery', components:GalleryPage},
-    {title:'Meteo', components:MeteoPage},
-    {title:'Places', components:PlacesPage},
-    {title:'Home', components:HomePage},
+    {title:'My Gallery', component:GalleryPage},
+    {title:'Meteo', component:MeteoPage},
+    {title:'Places', component:PlacesPage},
+    {title:'Home', component:HomePage},
   ];
   constructor() {}
 }
